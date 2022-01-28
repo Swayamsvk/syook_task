@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
-import Tabone from "./components/Tabone";
+import DishSelection from "./components/DishSelection/DishSelection";
+import Results from "./components/Results/Results";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <br />
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/tabone" element={<Tabone />} />
+          <Route path="/dishselection" element={<DishSelection />} />
+          <Route path="/results" element={<Results />} />
         </Routes>
       </BrowserRouter>
     </div>

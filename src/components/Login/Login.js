@@ -1,18 +1,7 @@
-import React, { useState, useContext, useEffect } from "react";
-import User from "../users.json";
+import React, { useState } from "react";
+import User from "../../users.json";
 
 const Login = (props) => {
-  //   useEffect(() => {
-  //     if (isAuthenticated) {
-  //       props.history.push("/");
-  //     }
-  //     if (error === "Invalid Credentials") {
-  //       setAlert(error, "danger");
-  //       clearErrors();
-  //     }
-  //     //eslint-disable-next-line
-  //   }, []);
-
   const [user, setUser] = useState({
     username: "",
     password: "",
@@ -27,7 +16,7 @@ const Login = (props) => {
     e.preventDefault();
     User.map((user) => {
       if (user.username == username && user.password == password) {
-        window.location = "/tabone";
+        window.location = "/dishselection";
       } else {
         setError(true);
       }
