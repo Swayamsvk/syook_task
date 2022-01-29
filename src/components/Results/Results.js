@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { AppBar, TextField, Toolbar, Typography } from "@mui/material";
 import Divider from "@mui/material/Divider";
 
 function Results() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [useLocation()]);
   const { state } = useLocation();
   const [prevData, setPrevData] = useState(state);
   const maintextstyle = {
@@ -48,7 +51,7 @@ function Results() {
       );
     }
   });
-  const renObjData = prevData.map(function (curData, id) {
+  const returnObjData = prevData.map(function (curData, id) {
     return (
       <div key={id} style={{ marginTop: "2%" }}>
         <div style={maintextstyle}> {curData.dishName}</div>
@@ -97,7 +100,7 @@ function Results() {
         {showRank}
         <br />
         <Divider />
-        {renObjData}
+        {returnObjData}
       </div>
     </div>
   );

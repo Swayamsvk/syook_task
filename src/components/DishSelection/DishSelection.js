@@ -61,12 +61,11 @@ function DishSelection(props) {
     navigate("/results", { state: data });
   };
 
-  const renObjData = data.map(function (curData, id) {
+  const returnObjData = data.map(function (curData, id) {
     return (
       <div key={id}>
         <div style={maintextstyle}>{curData.dishName}</div>
         <div style={secondarytextstyle}>{curData.description}</div>
-        {/* <img src={curData.image} alt="Dish Image" /> */}
         <div style={{ marginTop: "1%", marginBottom: "3%" }}>
           <TextField
             placeholder="Please Provide a Rank"
@@ -108,7 +107,7 @@ function DishSelection(props) {
         </AppBar>
       </div>
       <div style={maincontentstyle}>
-        {renObjData}
+        {returnObjData}
         <Button
           color="primary"
           variant="contained"
