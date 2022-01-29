@@ -1,11 +1,38 @@
 import React, { useEffect, useState } from "react";
-import User from "../../users.json";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Grid, Paper, TextField, Button } from "@mui/material";
 
 const Login = (props) => {
+  const User = [
+    {
+      id: 1,
+      username: "amar",
+      password: "amar123",
+    },
+    {
+      id: 2,
+      username: "akbar",
+      password: "akbar123",
+    },
+    {
+      id: 3,
+      username: "antony",
+      password: "antony123",
+    },
+    {
+      id: 4,
+      username: "john",
+      password: "john123",
+    },
+    {
+      id: 5,
+      username: "paul",
+      password: "paul123",
+    },
+  ];
+
   useEffect(() => {
     document.body.style.backgroundColor = "#DCDCDC";
   }, []);
