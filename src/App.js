@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
-import Navbar from "./components/Navbar/Navbar";
 import DishSelection from "./components/DishSelection/DishSelection";
 import Results from "./components/Results/Results";
 

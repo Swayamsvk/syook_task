@@ -34,25 +34,29 @@ const Login = (props) => {
     margin: "20px auto",
     backgeoundColor: "black",
   };
-  const btnstyle = { margin: "8px 0" };
+  const btnstyle = { margin: "8px 0", fontWeight: "bold" };
   return (
     <Grid>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography
-            variant="h3"
-            component="div"
-            align="center"
-            sx={{ flexGrow: 1 }}
-            style={{ fontWeight: "bold" }}
-          >
-            Login
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <div
+        style={{ marginTop: "-10px", marginLeft: "-10%", marginRight: "-10%" }}
+      >
+        <AppBar position="static">
+          <Toolbar>
+            <Typography
+              variant="h3"
+              component="div"
+              align="center"
+              sx={{ flexGrow: 1 }}
+              style={{ fontWeight: "bold" }}
+            >
+              Login
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </div>
       <Paper elevation={10} style={paperStyle}>
         <Grid align="center">
-          <h2>Sign In</h2>
+          <h2 style={{ color: "#0096FF" }}>Sign In</h2>
           {error ? (
             <p style={{ color: "#FF0000" }}>Incorrect Details</p>
           ) : (
