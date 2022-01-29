@@ -20,7 +20,12 @@ function DishSelection(props) {
     fontSize: 40,
   };
   const maintextstyle = {
-    fontSize: 50,
+    fontSize: 30,
+    color: "#0047AB",
+    fontWeight: "bold",
+  };
+  const secondarytextstyle = {
+    fontSize: 30,
     color: "#0047AB",
   };
 
@@ -53,7 +58,9 @@ function DishSelection(props) {
     return (
       <div key={id}>
         <div style={maintextstyle}>{curData.dishName}</div>
-        <div style={{ marginTop: "1%", marginBottom: "1%" }}>
+        <div style={secondarytextstyle}>{curData.description}</div>
+        {/* <img src={curData.image} alt="Dish Image" /> */}
+        <div style={{ marginTop: "1%", marginBottom: "3%" }}>
           <TextField
             placeholder="Please Provide a Rank"
             className="field"
@@ -104,7 +111,7 @@ function DishSelection(props) {
           </Toolbar>
         </AppBar>
       </div>
-      <div style={{ marginLeft: "5%", marginTop: "5%" }}>
+      <div style={{ marginLeft: "1%", marginTop: "1%", marginRight: "25%" }}>
         {renObjData}
         {/* <button onClick={() => handleClick(data)}>Submit</button> */}
         <Button

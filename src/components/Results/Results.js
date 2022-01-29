@@ -7,7 +7,12 @@ function Results() {
   const { state } = useLocation();
   const [prevData, setPrevData] = useState(state);
   const maintextstyle = {
-    fontSize: 50,
+    fontSize: 30,
+    color: "#0047AB",
+    fontWeight: "bold",
+  };
+  const secondarytextstyle = {
+    fontSize: 30,
     color: "#0047AB",
   };
   useEffect(() => {
@@ -54,7 +59,8 @@ function Results() {
     return (
       <div key={id} style={{ marginTop: "2%" }}>
         <div style={maintextstyle}> {curData.dishName}</div>
-        <div style={{ marginTop: "1%", marginBottom: "1%" }}>
+        <div style={secondarytextstyle}>{curData.description}</div>
+        <div style={{ marginTop: "1%", marginBottom: "3%" }}>
           <TextField
             placeholder="Change the Rank if you want to"
             className="field"
@@ -97,7 +103,7 @@ function Results() {
           </Toolbar>
         </AppBar>
       </div>
-      <div style={{ marginLeft: "5%", marginTop: "5%" }}>
+      <div style={{ marginLeft: "1%", marginTop: "1%", marginRight: "25%" }}>
         {showRank}
         <br />
         <Divider />
