@@ -99,7 +99,7 @@ function Results() {
               sx={{ flexGrow: 1 }}
               style={{ fontWeight: "bold" }}
             >
-              Result
+              Results
             </Typography>
           </Toolbar>
         </AppBar>
