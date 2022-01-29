@@ -65,6 +65,7 @@ const Login = (props) => {
           </Toolbar>
         </AppBar>
       </div>
+
       <Paper elevation={10} style={paperStyle}>
         <Grid align="center">
           <h2 style={{ color: "#0096FF" }}>Sign In</h2>
@@ -74,6 +75,7 @@ const Login = (props) => {
             <div />
           )}
         </Grid>
+
         <form onSubmit={onSubmit}>
           <TextField
             placeholder="User Name"
@@ -85,6 +87,7 @@ const Login = (props) => {
             fullWidth
             required
           />
+
           <TextField
             placeholder="Password"
             type="password"
@@ -95,6 +98,7 @@ const Login = (props) => {
             style={{ marginTop: "2%" }}
             fullWidth
           />
+
           <Button
             value="Login"
             type="submit"

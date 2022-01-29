@@ -104,6 +104,7 @@ function Results() {
           </Toolbar>
         </AppBar>
       </div>
+
       <div style={maincontentstyle}>
         {showRank}
         <br />
