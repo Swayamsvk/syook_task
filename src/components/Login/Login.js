@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import User from "../../users.json";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import { Grid, Paper, TextField, Button } from "@mui/material";
 
 const Login = (props) => {
   const [user, setUser] = useState({
@@ -22,48 +26,73 @@ const Login = (props) => {
       }
     });
   };
+
+  const paperStyle = {
+    padding: 20,
+    height: "40vh",
+    width: 280,
+    margin: "20px auto",
+    backgeoundColor: "black",
+  };
+  const btnstyle = { margin: "8px 0" };
   return (
-    <div>
-      <h1 className="head">Account Login</h1>
-      {error ? <p>Incorrect Details</p> : <div />}
-      <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">User Name</label>
-          <input
+    <Grid>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography
+            variant="h3"
+            component="div"
+            align="center"
+            sx={{ flexGrow: 1 }}
+            style={{ fontWeight: "bold" }}
+          >
+            Login
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Paper elevation={10} style={paperStyle}>
+        <Grid align="center">
+          <h2>Sign In</h2>
+          {error ? (
+            <p style={{ color: "#FF0000" }}>Incorrect Details</p>
+          ) : (
+            <div />
+          )}
+        </Grid>
+        <form onSubmit={onSubmit}>
+          <TextField
             placeholder="User Name"
-            className="field"
             type="text"
             name="username"
             value={username}
             onChange={onChange}
+            style={{ marginTop: "2%" }}
+            fullWidth
             required
           />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            className="field"
+          <TextField
             placeholder="Password"
             type="password"
             name="password"
             value={password}
             onChange={onChange}
             required
+            style={{ marginTop: "2%" }}
+            fullWidth
           />
-        </div>
-        <input
-          className="field"
-          type="submit"
-          value="Login"
-          className="btn btn-primary btn-block"
-        />
-      </form>
-    </div>
-    // <div>
-    //   {User.map((user) => {
-    //     return <p>{user.username}</p>;
-    //   })}
-    // </div>
+          <Button
+            value="Login"
+            type="submit"
+            color="primary"
+            variant="contained"
+            style={btnstyle}
+            fullWidth
+          >
+            Sign in
+          </Button>
+        </form>
+      </Paper>
+    </Grid>
   );
 };
 
