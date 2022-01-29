@@ -7,27 +7,34 @@ function Results() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [useLocation()]);
+
   const { state } = useLocation();
+
   const [prevData, setPrevData] = useState(state);
+
   const maintextstyle = {
     fontSize: 30,
     color: "#0047AB",
     fontWeight: "bold",
   };
+
   const maincontentstyle = {
     marginLeft: "1%",
     marginTop: "1%",
     marginRight: "25%",
   };
+
   const secondarytextstyle = {
     fontSize: 30,
     color: "#0047AB",
   };
+
   const appbarstyle = {
     marginTop: "-10px",
     marginLeft: "-8px",
     marginRight: "-8px",
   };
+
   const showRank = state.map(function (data, id) {
     if (data.rank == 1) {
       return (
@@ -51,6 +58,7 @@ function Results() {
       );
     }
   });
+
   const returnObjData = prevData.map(function (curData, id) {
     return (
       <div key={id} style={{ marginTop: "2%" }}>

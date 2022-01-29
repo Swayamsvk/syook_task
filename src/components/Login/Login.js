@@ -9,10 +9,12 @@ const Login = (props) => {
   useEffect(() => {
     document.body.style.backgroundColor = "#DCDCDC";
   }, []);
+
   const [user, setUser] = useState({
     username: "",
     password: "",
   });
+
   const [error, setError] = useState(false);
 
   const { username, password } = user;
@@ -37,12 +39,15 @@ const Login = (props) => {
     margin: "20px auto",
     backgeoundColor: "black",
   };
+
   const btnstyle = { margin: "8px 0", fontWeight: "bold" };
+
   const appbarstyle = {
     marginTop: "-10px",
     marginLeft: "-8px",
     marginRight: "-8px",
   };
+
   return (
     <Grid>
       <div style={appbarstyle}>

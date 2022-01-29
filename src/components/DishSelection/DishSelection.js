@@ -15,20 +15,24 @@ function DishSelection(props) {
     fontWeight: "bold",
     fontSize: 40,
   };
+
   const maintextstyle = {
     fontSize: 30,
     color: "#0047AB",
     fontWeight: "bold",
   };
+
   const maincontentstyle = {
     marginLeft: "1%",
     marginTop: "1%",
     marginRight: "25%",
   };
+
   const secondarytextstyle = {
     fontSize: 30,
     color: "#0047AB",
   };
+
   const appbarstyle = {
     marginTop: "-10px",
     marginLeft: "-8px",
@@ -46,6 +50,7 @@ function DishSelection(props) {
       .catch((error) => {
         console.log(error);
       });
+
     setData(
       data.map((d) => {
         return {
@@ -57,6 +62,7 @@ function DishSelection(props) {
       })
     );
   }, []);
+
   const handleClick = (data) => {
     navigate("/results", { state: data });
   };
