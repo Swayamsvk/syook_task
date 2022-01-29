@@ -38,15 +38,14 @@ const Login = (props) => {
     backgeoundColor: "black",
   };
   const btnstyle = { margin: "8px 0", fontWeight: "bold" };
+  const appbarstyle = {
+    marginTop: "-10px",
+    marginLeft: "-8px",
+    marginRight: "-8px",
+  };
   return (
     <Grid>
-      <div
-        style={{
-          marginTop: "-10px",
-          marginLeft: "-8px",
-          marginRight: "-8px",
-        }}
-      >
+      <div style={appbarstyle}>
         <AppBar position="static">
           <Toolbar>
             <Typography

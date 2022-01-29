@@ -7,10 +7,6 @@ import { AppBar, Button, TextField, Toolbar, Typography } from "@mui/material";
 function DishSelection(props) {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
-  // const { position, dataValue } = rank;
-  // console.log(position, "position");
-  //console.log(dataValue, "datavalue");
-  console.log(data);
   const btnstyle = {
     width: "170px",
     height: "60px",
@@ -24,9 +20,19 @@ function DishSelection(props) {
     color: "#0047AB",
     fontWeight: "bold",
   };
+  const maincontentstyle = {
+    marginLeft: "1%",
+    marginTop: "1%",
+    marginRight: "25%",
+  };
   const secondarytextstyle = {
     fontSize: 30,
     color: "#0047AB",
+  };
+  const appbarstyle = {
+    marginTop: "-10px",
+    marginLeft: "-8px",
+    marginRight: "-8px",
   };
 
   useEffect(() => {
@@ -35,8 +41,10 @@ function DishSelection(props) {
         " https://raw.githubusercontent.com/syook/react-dishpoll/main/db.json"
       )
       .then((response) => {
-        //console.log(response.data, "this is response");
         setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
     setData(
       data.map((d) => {
@@ -50,7 +58,6 @@ function DishSelection(props) {
     );
   }, []);
   const handleClick = (data) => {
-    console.log(data, "next data");
     navigate("/results", { state: data });
   };
 
@@ -68,15 +75,6 @@ function DishSelection(props) {
             value={data.rank}
             onChange={(e) => {
               let curValue = e.target.value;
-              // setRank({
-              //   position: e.target.value,
-              //   dataValue: curData.dishName,
-              // });
-
-              //   {
-              //   position: curValue,
-              //   dataValue: data.dishName,
-              // }
               setData(
                 data.map((newData) => {
                   if (curData.id == newData.id) {
@@ -94,9 +92,7 @@ function DishSelection(props) {
 
   return (
     <div>
-      <div
-        style={{ marginTop: "-10px", marginLeft: "-8px", marginRight: "-8px" }}
-      >
+      <div style={appbarstyle}>
         <AppBar position="static">
           <Toolbar>
             <Typography
@@ -111,9 +107,8 @@ function DishSelection(props) {
           </Toolbar>
         </AppBar>
       </div>
-      <div style={{ marginLeft: "1%", marginTop: "1%", marginRight: "25%" }}>
+      <div style={maincontentstyle}>
         {renObjData}
-        {/* <button onClick={() => handleClick(data)}>Submit</button> */}
         <Button
           color="primary"
           variant="contained"
