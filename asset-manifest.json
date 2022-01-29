@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/syook_task/static/css/main.ca6bc1b7.css",
+    "main.js": "/syook_task/static/js/main.08666e28.js",
+    "index.html": "/syook_task/index.html",
+    "main.ca6bc1b7.css.map": "/syook_task/static/css/main.ca6bc1b7.css.map",
+    "main.08666e28.js.map": "/syook_task/static/js/main.08666e28.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca6bc1b7.css",
+    "static/js/main.08666e28.js"
+  ]
+}
