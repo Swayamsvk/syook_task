@@ -81,7 +81,7 @@ function Results() {
   return (
     <div>
       <div
-        style={{ marginTop: "-10px", marginLeft: "-10%", marginRight: "-10%" }}
+        style={{ marginTop: "-10px", marginLeft: "-8px", marginRight: "-8px" }}
       >
         <AppBar position="static">
           <Toolbar>

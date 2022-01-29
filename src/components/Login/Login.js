@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import User from "../../users.json";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -6,6 +6,9 @@ import Typography from "@mui/material/Typography";
 import { Grid, Paper, TextField, Button } from "@mui/material";
 
 const Login = (props) => {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#DCDCDC";
+  }, []);
   const [user, setUser] = useState({
     username: "",
     password: "",
@@ -38,7 +41,11 @@ const Login = (props) => {
   return (
     <Grid>
       <div
-        style={{ marginTop: "-10px", marginLeft: "-10%", marginRight: "-10%" }}
+        style={{
+          marginTop: "-10px",
+          marginLeft: "-8px",
+          marginRight: "-8px",
+        }}
       >
         <AppBar position="static">
           <Toolbar>
