@@ -9,3 +9,6 @@ Steps to run hte code :
 4.The rank along with the points will show in the Results section.
 
 5.If you update the rank it will be updated and reassin it to another item.
+
+hosted Link:
+https://syook-task.herokuapp.com/
